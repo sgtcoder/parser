@@ -1,0 +1,48 @@
+export const WwwMaketecheasierComExtractor = {
+  domain: 'www.maketecheasier.com',
+
+  title: {
+    selectors: [['meta[name="og:title"]', 'value']],
+  },
+
+  author: {
+    selectors: [
+      // enter author selectors
+    ],
+  },
+
+  date_published: {
+    selectors: [
+      // enter selectors
+    ],
+  },
+
+  dek: {
+    selectors: [
+      // enter selectors
+    ],
+  },
+
+  lead_image_url: {
+    selectors: [
+      // enter selectors
+    ],
+  },
+
+  content: {
+    selectors: ['article'],
+
+    // Is there anything in the content you selected that needs transformed
+    // before it's consumable content? E.g., unusual lazy loaded images
+    transforms: {
+      '.nolinks': 'p',
+      '.holsh-div': 'p',
+      '.bash': 'p',
+    },
+
+    // Is there anything that is in the result that shouldn't be?
+    // The clean selectors will remove anything that matches from
+    // the result
+    clean: ['header', '.entry-meta.mb-1'],
+  },
+};
